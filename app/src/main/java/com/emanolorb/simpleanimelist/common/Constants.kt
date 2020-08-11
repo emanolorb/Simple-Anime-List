@@ -2,6 +2,6 @@ package com.emanolorb.simpleanimelist.common
 
 class Constants {
     companion object {
-        val IMAGE_API_URL: String = "https://image.tmdb.org/t/p/w500/"
+        val KITSU_API_URL: String = "https://kitsu.io/api/edge/"
     }
 }
