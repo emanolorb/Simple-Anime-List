@@ -4,6 +4,6 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface KitsuApiService {
-    @GET("anime")
+    @GET("trending/anime")
     fun getAnimeList(): Call<AnimeHomeRequest>
 }

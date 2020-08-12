@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.emanolorb.simpleanimelist.common.Tools.debug_print
 import com.emanolorb.simpleanimelist.data.AnimeListViewModel
 import com.emanolorb.simpleanimelist.ui.HomeTabActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var animeListViewModel: AnimeListViewModel
@@ -20,23 +21,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setUpView()
     }
-
-    override fun onResume() {
-        super.onResume()
-        //setUpView()
-    }
     fun setUpView(){
-        animeListViewModel = ViewModelProvider(this).get(AnimeListViewModel::class.java)
-        // Create the observer which updates the UI.
-        val animeListObserver = Observer<List<AnimeModel>> {
-            if (it != null){
-                setList(it)
-            }
-        }
-        // Observer de las peliculas
-        animeListViewModel.getAnimeList().observe(this, animeListObserver)
+    btGoTabs.setOnClickListener {
+        startActivity(Intent(this, HomeTabActivity::class.java))
     }
-    fun setList(animeList:List<AnimeModel>){
-        debug_print(animeList.toString(),"Anime List")
     }
+
 }
