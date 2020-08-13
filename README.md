@@ -1,9 +1,9 @@
-#Anime list
+# Anime list
 
-Unofficial app for KITSU API
+## Unofficial app for KITSU API
 https://kitsu.docs.apiary.io/
 
-Installation
+## Installation
 Clone this repository and import into Android Studio
 
 git clone git@github.com:emanolorb/Simple-Anime-List.git

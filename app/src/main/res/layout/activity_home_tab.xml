@@ -5,13 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.HomeTabActivity">
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tbHomeTab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/colorPrimaryDark" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tlHomeTab"
