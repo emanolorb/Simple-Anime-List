@@ -3,6 +3,7 @@ package com.emanolorb.simpleanimelist.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import com.emanolorb.simpleanimelist.R
@@ -22,11 +23,25 @@ class HomeTabActivity : AppCompatActivity() {
 
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item?.itemId){
+            R.id.imGeneralItem -> {
+                debug_print("Item menu")
+                Toast.makeText(this, "You are beatifull!!", Toast.LENGTH_LONG).show()
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
 
     fun setToolBar(){
         // Toolbar settings
         toolbar = findViewById(R.id.tbHomeTab)
-        toolbar?.title = "Trending"
+        toolbar?.title = "Trending App"
         setSupportActionBar(toolbar)
     }
     fun setUpTabs(){
