@@ -1,6 +1,7 @@
 package com.emanolorb.simpleanimelist.ui.trendingList
 
 import AnimeModel
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
@@ -12,8 +13,10 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.emanolorb.simpleanimelist.R
+import com.emanolorb.simpleanimelist.common.MyApp
 import com.emanolorb.simpleanimelist.common.Tools.debug_print
 import com.emanolorb.simpleanimelist.data.AnimeListViewModel
+import com.emanolorb.simpleanimelist.ui.DetailActivity
 
 class AnimeTrendingFragment : Fragment() {
 
@@ -64,11 +67,11 @@ class AnimeTrendingFragment : Fragment() {
     }
 
     private fun partItemClicked(partItem : AnimeModel) {
-        debug_print(partItem.toString(), "item")
+        // debug_print(partItem.toString(), "item")
         // Launch second activity, pass part ID as string parameter
-//        val showDetailActivityIntent = Intent(this, MovieDetailActivity::class.java)
-//        showDetailActivityIntent.putExtra(Intent.EXTRA_TEXT, partItem.id.toString())
-//        startActivity(showDetailActivityIntent)
+        val showDetailActivityIntent = Intent(MyApp.instance, DetailActivity::class.java)
+        showDetailActivityIntent.putExtra("Detail", "anime/${partItem.id}")
+        startActivity(showDetailActivityIntent)
     }
 
     companion object {
