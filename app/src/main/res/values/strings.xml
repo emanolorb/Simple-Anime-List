@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Simple Anime List</string>
+    <string name="detailTypeDA">Tipo</string>
+    <string name="detailSynopsisDA">Sinopsis</string>
+    <string name="detailratingRankDA">Lugar en el Top</string>
+    <string name="detailStatusDA">Estatus</string>
+    <string name="detailStartingDateDA">Inicio de emisión</string>
 </resources>
